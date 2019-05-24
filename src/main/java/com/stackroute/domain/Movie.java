@@ -8,6 +8,10 @@ public class Movie {
     public Movie() {
     }
 
+    public Movie(Actor actor) {
+        this.actor = actor;
+    }
+
     public int getId() {
         return id;
     }

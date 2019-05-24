@@ -14,24 +14,24 @@ import org.springframework.core.io.ClassPathResource;
 public class Main {
     public static void main(String[] args) {
 
-        ClassPathResource resource = new ClassPathResource("beans.xml");
-        BeanFactory factory=new XmlBeanFactory(resource);
-        Movie movie1=(Movie)factory.getBean("movie1");
-        System.out.println(movie1.getActor().getName()+" acted in " +movie1.getMovieName());
-
-        ClassPathResource resource1 = new ClassPathResource("beans.xml");
-        BeanFactory factory1=new XmlBeanFactory(resource);
-        Movie movie2=(Movie)factory.getBean("movie2");
-        System.out.println(movie2.getActor().getName()+" acted in " +movie2.getMovieName());
+//        ClassPathResource resource = new ClassPathResource("beans.xml");
+//        BeanFactory factory=new XmlBeanFactory(resource);
+//        Movie movie1=(Movie)factory.getBean("movie1");
+//        System.out.println(movie1.getActor().getName()+" acted in " +movie1.getMovieName());
+//
+//        ClassPathResource resource1 = new ClassPathResource("beans.xml");
+//        BeanFactory factory1=new XmlBeanFactory(resource);
+//        Movie movie2=(Movie)factory.getBean("movie2");
+//        System.out.println(movie2.getActor().getName()+" acted in " +movie2.getMovieName());
 
 //        ClassPathResource resource = new ClassPathResource("beans.xml");
 //        BeanFactory factory=new XmlBeanFactory(resource);
 //        Movie movie1=(Movie)factory.getBean("movie");
 //        System.out.println(movie1.getActor().getName()+" acted in " +movie1.getMovieName());
-//
-//        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-//        Movie movie= (Movie) context.getBean("movie");
-//        System.out.println(movie.getActor().getName()+ " acted in: "+ movie.getMovieName());
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        Movie movie= (Movie) context.getBean("movie1");
+        System.out.println(movie.getActor().getName()+ " acted in: "+ movie.getMovieName());
 //
 //        BeanDefinitionRegistry beanDefinitionRegistry = new DefaultListableBeanFactory();
 //        BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
