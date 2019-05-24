@@ -77,4 +77,6 @@
         <property name="message" value="Hey monjo how r u girl"></property>
     </bean>
 
+    <bean id="beanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
+
 </beans>
