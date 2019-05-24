@@ -73,6 +73,8 @@
     <bean id="beanNameAwareDemo" class="com.stackroute.awareInterface.BeanNameAwareDemo"></bean>
     <bean id="resourceLoaderAwareDemo" class="com.stackroute.awareInterface.ResourceLoaderAwareDemo"></bean>
 
-
+    <bean id="beanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean">
+        <property name="message" value="Hey monjo how r u girl"></property>
+    </bean>
 
 </beans>

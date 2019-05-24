@@ -32,6 +32,10 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie= (Movie) context.getBean("movie1");
         System.out.println(movie.getActor().getName()+ " acted in: "+ movie.getMovieName());
+
+
+        ClassPathXmlApplicationContext cxt=(ClassPathXmlApplicationContext)context;
+        cxt.destroy();
 //
 //        BeanDefinitionRegistry beanDefinitionRegistry = new DefaultListableBeanFactory();
 //        BeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanDefinitionRegistry);
