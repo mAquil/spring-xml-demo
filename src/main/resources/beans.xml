@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--    <bean id="movie" class="com.stackroute.domain.Movie">  -->
+<!--        <property name="id" value="1" />-->
+<!--        <property name="movieName" value="Student of the year" />-->
+<!--        <property name="actor" ref="actor" />-->
+
+<!--    </bean>-->
+
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <property name="name" value="Shah Rukh Khan" />-->
+<!--        <property name="gender" value="M" />-->
+<!--        <property name="age" value="49" />-->
+<!--    </bean>-->
+
+<!--    <bean id="movie" class="com.stackroute.domain.Movie">-->
+<!--        <constructor-arg name="id" value="1" />-->
+<!--        <constructor-arg name="movieName" value="DDLJ" />-->
+
+<!--        <constructor-arg name="actor" ref="actor" />-->
+
+<!--    </bean>-->
+
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg name="name" value="Shah Rukh Khan" />-->
+<!--        <constructor-arg name="gender" value="M" />-->
+<!--        <constructor-arg name="age" value="49" />-->
+<!--    </bean>-->
+
+    <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg type="int" value="1"></constructor-arg>
+        <constructor-arg type="String" value="Mohabbatein"></constructor-arg>
+        <constructor-arg type="Actor" ref="actor"></constructor-arg>
+    </bean>
+
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <constructor-arg index="0" value="Varun Dhawan"></constructor-arg>
+        <constructor-arg index="1" value="Male"></constructor-arg>
+        <constructor-arg index="2" value="30"></constructor-arg>
+    </bean>
+
+
+</beans>
