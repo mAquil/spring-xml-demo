@@ -32,12 +32,29 @@
 <!--        <constructor-arg name="age" value="49" />-->
 <!--    </bean>-->
 
-    <bean name="movie1, movie2"  class="com.stackroute.domain.Movie" scope="prototype">
-    <!--<bean id="movie" class="com.stackroute.domain.Movie" scope="prototype"> -->
-        <constructor-arg type="int" value="1"></constructor-arg>
-        <constructor-arg type="String" value="Mohabbatein"></constructor-arg>
+<!--     <bean name="movie1, movie2"  class="com.stackroute.domain.Movie" scope="prototype">-->
+<!--    &lt;!&ndash;<bean id="movie" class="com.stackroute.domain.Movie" scope="prototype"> &ndash;&gt;-->
+<!--        <constructor-arg type="int" value="1"></constructor-arg>-->
+<!--        <constructor-arg type="String" value="Mohabbatein"></constructor-arg>-->
+<!--        <constructor-arg type="Actor" ref="actor"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="actor" class="com.stackroute.domain.Actor">-->
+<!--        <constructor-arg index="0" value="Varun Dhawan"></constructor-arg>-->
+<!--        <constructor-arg index="1" value="Male"></constructor-arg>-->
+<!--        <constructor-arg index="2" value="30"></constructor-arg>-->
+<!--    </bean>   -->
+
+
+
+
+    <bean name="movie1,movie2"  class="com.stackroute.domain.Movie" autowire="byName">
+        <!--<bean id="movie" class="com.stackroute.domain.Movie" scope="prototype"> -->
+<!--        <constructor-arg type="int" value="2"></constructor-arg>-->
+<!--        <constructor-arg type="String" value="Dhamal"></constructor-arg>-->
         <constructor-arg type="Actor" ref="actor"></constructor-arg>
     </bean>
+
 
     <bean id="actor" class="com.stackroute.domain.Actor">
         <constructor-arg index="0" value="Varun Dhawan"></constructor-arg>
