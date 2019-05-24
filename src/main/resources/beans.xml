@@ -32,7 +32,8 @@
 <!--        <constructor-arg name="age" value="49" />-->
 <!--    </bean>-->
 
-    <bean id="movie" class="com.stackroute.domain.Movie" scope="prototype">
+    <bean name="movie1, movie2"  class="com.stackroute.domain.Movie" scope="prototype">
+    <!--<bean id="movie" class="com.stackroute.domain.Movie" scope="prototype"> -->
         <constructor-arg type="int" value="1"></constructor-arg>
         <constructor-arg type="String" value="Mohabbatein"></constructor-arg>
         <constructor-arg type="Actor" ref="actor"></constructor-arg>
